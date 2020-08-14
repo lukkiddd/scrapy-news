@@ -16,7 +16,7 @@ scrapy runspider [SPIDER PATH] -a start_id=1000 -a end_id=1500 -o [OUTPUT_FILE]
 ## 1.1 Example
 
 ```bash
-scrapy runspider .news/spiders/prachatai.py -a start_id=1000 -a end_id=1500 -o prachatai.jl
+scrapy runspider ./news/spiders/prachatai.py -a start_id=1000 -a end_id=1500 -o prachatai.jl
 ```
 
 # 2. Spiders
@@ -30,7 +30,7 @@ URL: https://prachatai.com/print/[ARTICLE_ID]
 - `end_id` - Article IDs 
 
 ```bash
-scrapy runspider .news/spiders/prachatai.py -a start_id=1000 -a end_id=1500 -o prachatai.jl
+scrapy runspider ./news/spiders/prachatai.py -a start_id=1000 -a end_id=1500 -o prachatai.jl
 ```
 
 ## 2.2 Thaipbs
@@ -42,7 +42,7 @@ URL: http://news.thaipbs.or.th/content/[ARTICLE_ID]
 - `end_id` - Article IDs 
 
 ```bash
-scrapy runspider .news/spiders/thaipbs.py  -a start_id=1000 -a end_id=1500 -o thaipbs.jl
+scrapy runspider ./news/spiders/thaipbs.py  -a start_id=1000 -a end_id=1500 -o thaipbs.jl
 ```
 
 # 3. Output format
