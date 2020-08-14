@@ -1,11 +1,13 @@
 # Scrapy-news
 
-WIP ...
+[Scrapy](https://docs.scrapy.org/en/latest/index.html) spiders for news website
+
 
 # 1. How to use
 
 1. Install dependency (`pip install -r requirements.txt`)
 2. Run spider
+3. Modify [Scrapy Settings](https://docs.scrapy.org/en/latest/topics/settings.html) if needed
 
 ```
 scrapy runspider [SPIDER PATH] -a start_id=1000 -a end_id=1500 -o [OUTPUT_FILE]
