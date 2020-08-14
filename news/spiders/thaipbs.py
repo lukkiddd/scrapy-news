@@ -8,9 +8,14 @@ class ThaipbsSpider(scrapy.Spider):
     allowed_domains = ['news.thaipbs.or.th']
     start_urls = ['http://news.thaipbs.or.th/content']
 
+    def __init__(self, *args, **kwargs):
+        super(ThaipbsSpider, self).__init__(*args, **kwargs)
+        self.start_id = int(getattr(self, 'start_id', 0))
+        self.end_id = int(getattr(self, 'end_id', 80000))
+
     def start_requests(self):
         url = "http://news.thaipbs.or.th/content/{}"
-        for i in range(0, 300000):
+        for i in range(self.start_id, self.end_id):
             yield scrapy.Request(url.format(i), callback=self.parse,
                     meta={'dont_redirect': True, 'id': i})
 

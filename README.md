@@ -37,6 +37,23 @@ scrapy runspider .news/spiders/prachatai.py -a start_id=1000 -a end_id=1500 -o p
 
 URL: http://news.thaipbs.or.th/content/[ARTICLE_ID]
 
+** Arguments **:
+- `start_id` - Article IDs
+- `end_id` - Article IDs 
+
 ```bash
-scrapy runspider .news/spiders/thaipbs.py -o thaipbs.jl
+scrapy runspider .news/spiders/thaipbs.py  -a start_id=1000 -a end_id=1500 -o thaipbs.jl
+```
+
+# 3. Output format
+
+Support as scrapy [feed export](https://docs.scrapy.org/en/latest/topics/feed-exports.html?highlight=output)
+
+- `.csv`
+- `.jl` (JSON Line)
+- `.json`
+- `.xml`
+
+```bash
+scrapy runspider .news/spiders/thaipbs.py  -a start_id=1000 -a end_id=1500 -o thaipbs.csv
 ```
